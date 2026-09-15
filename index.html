@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bohlale Village — Residence Portal</title>
+<meta name="description" content="The Bohlale Village residence hub — leadership, issue reporting, bus schedule, petitions and residence life in one place.">
+<link rel="icon" type="image/png" href="assets/logo/bohlale-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide-static/0.363.0/font/lucide.css" onerror="this.remove()">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SKIP LINK ============ -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar" role="banner">
+  <div class="topbar__inner">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#/home" class="brand" data-route="/home">
+      <img src="assets/logo/bohlale-logo.png" alt="Bohlale Village emblem" class="brand__mark">
+      <span class="brand__text">
+        <strong>Bohlale</strong> Village
+        <em>Residence Portal</em>
+      </span>
+    </a>
+
+    <nav class="mainnav" aria-label="Primary">
+      <a href="#/home" data-route="/home">Home</a>
+      <a href="#/leadership" data-route="/leadership">Leadership</a>
+      <a href="#/committees" data-route="/committees">Committees</a>
+      <a href="#/bus" data-route="/bus">Bus Schedule</a>
+      <a href="#/petitions" data-route="/petitions">Petitions</a>
+      <a href="#/announcements" data-route="/announcements">Announcements</a>
+      <a href="#/contacts" data-route="/contacts">Contacts</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search the portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="19" height="19"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <a href="#/report" class="btn btn--gold btn--sm" data-route="/report">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M3 11l18-8-8 18-2-8-8-2z"></path></svg><span>Report Issue</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div class="drawer-scrim" id="drawerScrim" hidden></div>
+<nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile menu" aria-hidden="true">
+  <div class="mobile-drawer__head">
+    <img src="assets/logo/bohlale-logo.png" alt="" class="brand__mark">
+    <span>Bohlale Village</span>
+    <button class="icon-btn" id="closeDrawerBtn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="19" height="19"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+  </div>
+  <a href="#/home" data-route="/home"><i data-lucide="home"></i>Home</a>
+  <a href="#/residence" data-route="/residence"><i data-lucide="building-2"></i>Residence</a>
+  <a href="#/leadership" data-route="/leadership"><i data-lucide="users"></i>Leadership</a>
+  <a href="#/committees" data-route="/committees"><i data-lucide="layout-grid"></i>Committees</a>
+  <a href="#/emerging" data-route="/emerging"><i data-lucide="sprout"></i>Emerging Leaders</a>
+  <a href="#/report" data-route="/report"><i data-lucide="megaphone"></i>Report an Issue</a>
+  <a href="#/my-reports" data-route="/my-reports"><i data-lucide="clipboard-list"></i>My Reports</a>
+  <a href="#/bus" data-route="/bus"><i data-lucide="bus"></i>Bus Schedule</a>
+  <a href="#/petitions" data-route="/petitions"><i data-lucide="scroll-text"></i>Petitions</a>
+  <a href="#/announcements" data-route="/announcements"><i data-lucide="bell"></i>Announcements</a>
+  <a href="#/community" data-route="/community"><i data-lucide="video"></i>Community / TikTok</a>
+  <a href="#/contacts" data-route="/contacts"><i data-lucide="phone"></i>Contacts</a>
+</nav>
+
+<!-- ============ MAIN ============ -->
+<main id="main" tabindex="-1"></main>
+
+<!-- ============ MOBILE ACTION BAR ============ -->
+<nav class="tabbar" aria-label="Quick actions">
+  <a href="#/home" data-route="/home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Home</span></a>
+  <a href="#/bus" data-route="/bus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M8 6v6M16 6v6M2 12h20M4 18v2M20 18v2"></path><rect x="4" y="3" width="16" height="15" rx="2"></rect><circle cx="7.5" cy="16.5" r="1"></circle><circle cx="16.5" cy="16.5" r="1"></circle></svg><span>Bus</span></a>
+  <a href="#/report" class="tabbar__cta" data-route="/report"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M3 11l18-8-8 18-2-8-8-2z"></path></svg><span>Report</span></a>
+  <a href="#/leadership" data-route="/leadership"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Leaders</span></a>
+  <a href="#/more" data-route="/more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg><span>More</span></a>
+</nav>
+
+<!-- ============ SEARCH OVERLAY ============ -->
+<div class="search-overlay" id="searchOverlay" hidden>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="19" height="19" style="flex-shrink:0;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <input type="search" id="searchInput" placeholder="Search — shower, Premier, bus, Goaumba, sports…" aria-label="Search Bohlale Village">
+    <button class="icon-btn" id="closeSearchBtn" aria-label="Close search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="19" height="19"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/logo/bohlale-logo.png" alt="Bohlale Village emblem">
+      <div>
+        <strong>Bohlale Village</strong>
+        <p>Residence Portal</p>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Quick links</h4>
+      <a href="#/leadership" data-route="/leadership">Leadership</a>
+      <a href="#/report" data-route="/report">Report an issue</a>
+      <a href="#/bus" data-route="/bus">Bus schedule</a>
+      <a href="#/petitions" data-route="/petitions">Petitions</a>
+    </div>
+    <div class="footer__col">
+      <h4>Community</h4>
+      <a href="https://www.tiktok.com/@nwubohlalevillage?_r=1&_t=ZS-99jgZEcHglk" target="_blank" rel="noopener">TikTok @nwubohlalevillage</a>
+      <a href="#/contacts" data-route="/contacts">Important contacts</a>
+      <a href="#/committees" data-route="/committees">Committees</a>
+    </div>
+    <p class="footer__disclaimer">
+      Prototype residence portal — information and functionality shown may be for demonstration purposes.
+      A Home Where Lokshin Culture Is Embraced.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
