@@ -3,7 +3,7 @@
 A student-focused digital residence platform concept designed to make
 residence communication, reporting and student participation easier.
 
-🔗 Live Demo: [Add GitHub Pages link here]
+🔗 Live Demo: [https://lerato13dev.github.io/bohlale-village-portal/]
 
 💡 The Idea
 
